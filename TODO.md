@@ -15,9 +15,10 @@
 - [x] Add shared Firebase Admin app initializer for modular trigger/cron reuse.
 
 ## Phase 2: ELO Math & Triggered Engine
-- [ ] Implement ELO helper in `functions/src/utils/eloCalculator.ts`.
-- [ ] Implement idempotent `onInsightWritten` trigger.
-- [ ] Use Firestore transaction for atomic ELO update + processed flag.
+- [x] Implement ELO helper in `functions/src/utils/eloCalculator.ts`.
+- [x] Implement idempotent `onInsightWritten` trigger.
+- [x] Use Firestore transaction for atomic ELO update + processed flag.
+- [x] Add runtime payload guards to prevent malformed insight writes from breaking retries.
 
 ## Phase 3: Streak Monitor & FCM Cleanup
 - [ ] Implement nightly scheduled streak check cron.
