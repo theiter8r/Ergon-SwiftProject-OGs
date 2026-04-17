@@ -1,1 +1,2 @@
-export {};
+export { onUserCreate } from "./onUserCreate";
+

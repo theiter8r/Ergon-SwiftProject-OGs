@@ -9,9 +9,10 @@
 - [x] Clean already-staged machine-specific artifacts from git index.
 
 ## Phase 1: Data Models & Security
-- [ ] Create strict Firestore interfaces in `functions/src/models/types.ts`.
-- [ ] Implement strict user-scoped Firestore security rules.
-- [ ] Add auth user-create trigger to initialize `users/{uid}` defaults.
+- [x] Create strict Firestore interfaces in `functions/src/models/types.ts`.
+- [x] Implement strict user-scoped Firestore security rules.
+- [x] Add auth user-create trigger to initialize `users/{uid}` defaults.
+- [x] Add shared Firebase Admin app initializer for modular trigger/cron reuse.
 
 ## Phase 2: ELO Math & Triggered Engine
 - [ ] Implement ELO helper in `functions/src/utils/eloCalculator.ts`.

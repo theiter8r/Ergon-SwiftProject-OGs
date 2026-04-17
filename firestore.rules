@@ -2,9 +2,71 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Phase 0 default deny-all posture; Phase 1 introduces user-scoped rules.
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function validDateKey(dateString) {
+      return dateString.matches('^\\d{4}-\\d{2}-\\d{2}$');
+    }
+
+    function validUserDocumentShape() {
+      return request.resource.data.keys().hasOnly([
+          'email',
+          'current_elo',
+          'streak_count',
+          'fcm_token',
+          'createdAt'
+        ]) &&
+        request.resource.data.email is string &&
+        request.resource.data.current_elo is number &&
+        request.resource.data.streak_count is number &&
+        (request.resource.data.fcm_token == null || request.resource.data.fcm_token is string) &&
+        request.resource.data.createdAt is timestamp;
+    }
+
+    function validDailyInsightShape() {
+      return request.resource.data.keys().hasOnly([
+          'risk_score',
+          'completed_microtask',
+          'processed_for_elo',
+          'timestamp'
+        ]) &&
+        request.resource.data.risk_score is number &&
+        request.resource.data.risk_score >= 0 &&
+        request.resource.data.risk_score <= 10 &&
+        request.resource.data.completed_microtask is bool &&
+        request.resource.data.processed_for_elo is bool &&
+        request.resource.data.timestamp is timestamp;
+    }
+
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create: if false;
+      allow update: if isOwner(userId) && validUserDocumentShape() &&
+        request.resource.data.current_elo == resource.data.current_elo &&
+        request.resource.data.streak_count == resource.data.streak_count &&
+        request.resource.data.createdAt == resource.data.createdAt;
+      allow delete: if false;
+
+      match /daily_insights/{dateString} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && validDateKey(dateString) && validDailyInsightShape() &&
+          request.resource.data.processed_for_elo == false;
+        allow update: if isOwner(userId) && validDateKey(dateString) && validDailyInsightShape() &&
+          resource.data.processed_for_elo == false &&
+          request.resource.data.processed_for_elo == resource.data.processed_for_elo;
+        allow delete: if isOwner(userId);
+      }
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }
   }
 }
+

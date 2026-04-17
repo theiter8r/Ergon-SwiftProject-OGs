@@ -1,1 +1,2 @@
-export {};
+export { getAdminApp } from "./firebase";
+
