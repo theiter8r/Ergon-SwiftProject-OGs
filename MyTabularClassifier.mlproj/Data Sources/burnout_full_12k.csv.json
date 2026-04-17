@@ -1,0 +1,97 @@
+{
+  "activityEntities" : [
+    "dataSourceTrainingStarted",
+    [
+      {
+        "createdDate" : "2026-04-17T13:34:58Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "4BD8671B-B8DB-44CF-A61C-C44E48F6480A",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Used By"
+      },
+      {
+        "createdDate" : "2026-04-17T13:45:47Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "2D607391-D30C-4DC2-8736-35F4032C1D5F",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Used By"
+      },
+      {
+        "createdDate" : "2026-04-17T13:51:46Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "8A6EFC87-CEE8-4621-AD0C-8B1D7D3CBCFC",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Used By"
+      },
+      {
+        "createdDate" : "2026-04-17T13:52:48Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "D5B69224-5879-4721-8E5F-E6E57BDD3050",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Used By"
+      },
+      {
+        "createdDate" : "2026-04-17T13:54:06Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "8492CAC7-30EE-4DF7-80D2-DD9002299EBC",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Used By"
+      }
+    ],
+    "dataSourceMetrics",
+    [
+      {
+        "createdDate" : "2026-04-17T13:34:58Z",
+        "event" : "dataSourceMetrics",
+        "id" : "C7305564-01A1-4A81-A614-B2F7918BDA3A",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      },
+      {
+        "createdDate" : "2026-04-17T13:45:47Z",
+        "event" : "dataSourceMetrics",
+        "id" : "E21E9F0B-85C7-4BBE-9DA5-177B47208A0C",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      },
+      {
+        "createdDate" : "2026-04-17T13:51:46Z",
+        "event" : "dataSourceMetrics",
+        "id" : "EFF8EF2C-C23D-4E6A-B06B-0B6476C20A4C",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      },
+      {
+        "createdDate" : "2026-04-17T13:52:48Z",
+        "event" : "dataSourceMetrics",
+        "id" : "D4174809-1594-4B6D-8D56-8908BBD00EE9",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      },
+      {
+        "createdDate" : "2026-04-17T13:54:06Z",
+        "event" : "dataSourceMetrics",
+        "id" : "145DAFCB-F5A4-45FA-8B9E-4AEAED1D82F3",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      }
+    ]
+  ],
+  "createdDate" : "2026-04-17T13:30:56Z",
+  "dataPathRelativeToProjectURL" : "../../../Downloads/burnout_full_12k.csv/",
+  "dataResult" : {
+    "createdDate" : "2026-04-17T13:30:56Z",
+    "dataSourceID" : "3CA6C5F3-D533-4380-862A-17D3C4AE9739",
+    "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_full_12k.csv"
+  },
+  "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_full_12k.csv",
+  "experimentIDs" : [
+    "3F6EB8DF-55A4-4FAF-B65B-9090F7E81B40"
+  ],
+  "id" : "3CA6C5F3-D533-4380-862A-17D3C4AE9739",
+  "modifiedDate" : "2026-04-17T13:54:06Z",
+  "pathType" : 0,
+  "preferredFilename" : "burnout_full_12k.csv",
+  "title" : "burnout_full_12k.csv",
+  "version" : "1.0"
+}

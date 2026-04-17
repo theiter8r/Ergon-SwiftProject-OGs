@@ -1,0 +1,29 @@
+{
+  "activityEntities" : [
+    "projectCreated",
+    [
+      {
+        "createdDate" : "2026-04-17T12:57:18Z",
+        "event" : "projectCreated",
+        "id" : "6C9A424B-43F1-4FC3-96BE-706E2E4C5AB9",
+        "subtitle" : "MyTabularClassifier",
+        "title" : "Project Created"
+      }
+    ]
+  ],
+  "authorName" : "Raaj  Patkar",
+  "createdDate" : "2026-04-17T12:57:18Z",
+  "description" : "",
+  "id" : "F1012D60-B1EC-4770-9ED9-E14E67F835D0",
+  "license" : "",
+  "location" : "",
+  "modifiedDate" : "2026-04-17T12:57:18Z",
+  "projectName" : "MyTabularClassifier",
+  "settingsEntity" : {
+    "snapshotOnExtendTraining" : true,
+    "snapshotOnResumeTraining" : false
+  },
+  "taskType" : "generalClassifier",
+  "title" : "Tabular Classification",
+  "version" : "1.1"
+}

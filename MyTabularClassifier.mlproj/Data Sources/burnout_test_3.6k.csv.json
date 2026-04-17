@@ -1,0 +1,22 @@
+{
+  "activityEntities" : [
+
+  ],
+  "createdDate" : "2026-04-17T13:34:53Z",
+  "dataPathRelativeToProjectURL" : "../../../Downloads/burnout_test_3.6k.csv/",
+  "dataResult" : {
+    "createdDate" : "2026-04-17T13:34:53Z",
+    "dataSourceID" : "744806DD-01CA-4E1C-942B-DC6EA4369ADE",
+    "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_test_3.6k.csv"
+  },
+  "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_test_3.6k.csv",
+  "experimentIDs" : [
+    "3F6EB8DF-55A4-4FAF-B65B-9090F7E81B40"
+  ],
+  "id" : "744806DD-01CA-4E1C-942B-DC6EA4369ADE",
+  "modifiedDate" : "2026-04-17T13:34:53Z",
+  "pathType" : 0,
+  "preferredFilename" : "burnout_test_3.6k.csv",
+  "title" : "burnout_test_3.6k.csv",
+  "version" : "1.0"
+}

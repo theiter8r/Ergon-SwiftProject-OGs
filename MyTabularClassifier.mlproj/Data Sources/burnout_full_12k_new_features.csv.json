@@ -1,0 +1,174 @@
+{
+  "activityEntities" : [
+    "dataSourceMetrics",
+    [
+      {
+        "createdDate" : "2026-04-17T14:36:08Z",
+        "event" : "dataSourceMetrics",
+        "id" : "3BA8174C-B6E3-4BAF-B686-B0011C4EABFD",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      },
+      {
+        "createdDate" : "2026-04-17T15:46:34Z",
+        "event" : "dataSourceMetrics",
+        "id" : "D522BCF5-E9EC-4213-95D0-4EEA4B9D4268",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      },
+      {
+        "createdDate" : "2026-04-17T15:53:58Z",
+        "event" : "dataSourceMetrics",
+        "id" : "83981C3E-BDB1-40B1-B341-9D5053CBEB12",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      },
+      {
+        "createdDate" : "2026-04-17T18:01:52Z",
+        "event" : "dataSourceMetrics",
+        "id" : "48A1EAD4-9EE9-4B20-BB5D-356DE60AB01E",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      },
+      {
+        "createdDate" : "2026-04-17T18:24:16Z",
+        "event" : "dataSourceMetrics",
+        "id" : "B22D35A6-523F-42E8-8E5C-E21CC3844C85",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      },
+      {
+        "createdDate" : "2026-04-17T19:06:48Z",
+        "event" : "dataSourceMetrics",
+        "id" : "1F8AD265-82C4-4343-932F-09A9E71A97F6",
+        "subtitle" : "3 Classes, 12,000 Items",
+        "title" : "Data Summary"
+      }
+    ],
+    "dataSourceTrainingStarted",
+    [
+      {
+        "createdDate" : "2026-04-17T14:36:08Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "1C3F5047-AB9E-4ABD-B120-7259A385CB72",
+        "subtitle" : "MyTabularClassifier 6",
+        "title" : "Used By"
+      },
+      {
+        "createdDate" : "2026-04-17T15:46:34Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "2D2FB755-D114-4D7D-82C2-0B90940818F9",
+        "subtitle" : "MyTabularClassifier 6 copy",
+        "title" : "Used By"
+      },
+      {
+        "createdDate" : "2026-04-17T15:53:58Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "53A2606D-259F-4745-BCA6-CE6446C83EC4",
+        "subtitle" : "MyTabularClassifier 6 copy 1",
+        "title" : "Used By"
+      },
+      {
+        "createdDate" : "2026-04-17T18:01:52Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "9B5A2FAE-01CC-458F-B225-B998F1133AAC",
+        "subtitle" : "MyTabularClassifier 6 copy 2",
+        "title" : "Used By"
+      },
+      {
+        "createdDate" : "2026-04-17T18:24:16Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "F036062C-7ACD-4D8A-BB54-47BF14AA1517",
+        "subtitle" : "MyTabularClassifier 6 copy 3",
+        "title" : "Used By"
+      },
+      {
+        "createdDate" : "2026-04-17T19:06:48Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "C805DBE4-2810-4B7D-BE2D-70E45612AC7A",
+        "subtitle" : "MyTabularClassifier 6 copy 3",
+        "title" : "Used By"
+      }
+    ]
+  ],
+  "createdDate" : "2026-04-17T14:20:28Z",
+  "dataPathRelativeToProjectURL" : "../../../Downloads/burnout_full_12k_new_features.csv/",
+  "dataResult" : {
+    "columnTypes" : [
+      "Double",
+      "Double",
+      "Double",
+      "Double",
+      "Double",
+      "String"
+    ],
+    "columnValues" : [
+      "7.20, 9.90, 9.90, 5.50, 7.40, 4.30, 7.80, 5.80, 9.10, 7.50, 9.30, 8.90, 8.30, 10.00, 7.10, 4.90, 8.30, 4.80, 9.00, 7.60, 5.00, 7.30, 7.70, 5.80, 9.30, 4.10, 8.90, 7.90, 7.70, 5.00",
+      "46.90, 59.30, 60.70, 67.10, 73.10, 48.30, 45.50, 57.10, 69.00, 66.50, 30.90, 74.30, 40.20, 52.20, 38.70, 25.80, 50.10, 41.00, 70.60, 51.50, 15.00, 39.60, 30.60, 81.10, 52.50, 58.20, 63.90, 65.80, 48.00, 67.30",
+      "3.40, 1.60, 3.30, 8.50, 1.30, 3.80, 8.50, 12.00, 3.40, 4.10, 2.60, 2.50, 0.60, 3.30, 8.90, 8.50, 3.90, 2.40, 0.70, 2.10, 9.30, 1.70, 0.10, 9.50, 2.20, 6.60, 4.00, 2.70, 6.10, 5.80",
+      "7.20, 6.40, 7.00, 6.90, 9.90, 3.40, 5.60, 1.00, 7.40, 9.10, 7.50, 7.60, 8.60, 9.10, 3.10, 6.30, 8.30, 10.00, 7.90, 7.00, 6.40, 7.70, 3.60, 8.60, 8.50, 3.90, 7.50, 8.50, 3.70, 4.80",
+      "0.04, -1.21, 4.93, 1.34, 0.44, 2.05, 1.95, -1.85, 1.18, 0.76, 0.69, 1.19, 0.51, 1.25, -5.00, -0.09, 1.29, -1.43, 0.50, 0.17, -1.89, 1.26, -2.18, 0.32, 2.02, -1.63, 1.81, 1.47, 2.68, 3.57",
+      "Low, Low, Low, Medium, Low, High, Medium, High, Low, Medium, Low, Low, Low, Low, Medium, High, Low, Low, Low, Low, High, Low, High, High, Low, Medium, Medium, Low, Medium, Medium"
+    ],
+    "columns" : [
+      "Sleep_Hours",
+      "HRV_ms",
+      "Calendar_Density",
+      "Subjective_Score",
+      "Baseline_Deltas",
+      "Burnout_Risk"
+    ],
+    "createdDate" : "2026-04-17T14:20:28Z",
+    "dataAnalysis" : {
+      "classifierAnalysis" : {
+
+      },
+      "issues" : [
+        {
+          "description" : "No target selected",
+          "severity" : "notReady"
+        },
+        {
+          "description" : "Data has 12000 rows",
+          "severity" : "info"
+        },
+        {
+          "description" : "No features selected",
+          "severity" : "notReady"
+        }
+      ],
+      "objectDetectorAnalysis" : {
+        "details" : {
+
+        }
+      },
+      "summary" : {
+        "canUseValidation" : 1,
+        "sampleCount" : 12000
+      }
+    },
+    "dataSourceID" : "334BDEFE-7E77-43C3-B3FE-DAE02D138357",
+    "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_full_12k_new_features.csv",
+    "error" : {
+      "code" : 1000,
+      "domain" : "composer.error.domain",
+      "errorType" : "notReady",
+      "reason" : "No target selected"
+    },
+    "itemsCount" : 12000
+  },
+  "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_full_12k_new_features.csv",
+  "experimentIDs" : [
+    "0A300A64-D940-4EF6-8722-ACD662D84120",
+    "E5B01C4C-0E3E-46BD-9E69-C75A4722BB90",
+    "49B5E5BE-01E3-4763-AB04-1F6715112EDF",
+    "BF613190-61E9-4EEA-890C-53A994306B0F",
+    "C99C7BA7-C3A6-4E5A-9780-5976AEA4704B"
+  ],
+  "id" : "334BDEFE-7E77-43C3-B3FE-DAE02D138357",
+  "modifiedDate" : "2026-04-17T19:06:48Z",
+  "pathType" : 0,
+  "preferredFilename" : "burnout_full_12k_new_features.csv",
+  "title" : "burnout_full_12k_new_features.csv",
+  "version" : "1.0"
+}

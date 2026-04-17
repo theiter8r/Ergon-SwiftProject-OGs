@@ -1,0 +1,41 @@
+{
+  "activityEntities" : [
+    "dataSourceMetrics",
+    [
+      {
+        "createdDate" : "2026-04-17T13:03:26Z",
+        "event" : "dataSourceMetrics",
+        "id" : "E2153CEE-4011-4827-A127-8C50BB1A4A0A",
+        "subtitle" : "3 Classes, 2,000 Items",
+        "title" : "Data Summary"
+      }
+    ],
+    "dataSourceTrainingStarted",
+    [
+      {
+        "createdDate" : "2026-04-17T13:03:26Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "E660F7CE-E8D3-44C5-BF8B-BA36A54CE74C",
+        "subtitle" : "MyTabularClassifier 2",
+        "title" : "Used By"
+      }
+    ]
+  ],
+  "createdDate" : "2026-04-17T13:02:23Z",
+  "dataPathRelativeToProjectURL" : "../../../Downloads/burnout_train.csv/",
+  "dataResult" : {
+    "createdDate" : "2026-04-17T13:02:23Z",
+    "dataSourceID" : "DCC2BDCF-5B0B-4251-A3DE-768A7BD709C7",
+    "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_train.csv"
+  },
+  "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_train.csv",
+  "experimentIDs" : [
+    "CDAC63F1-5210-440A-8F36-441F9962C640"
+  ],
+  "id" : "DCC2BDCF-5B0B-4251-A3DE-768A7BD709C7",
+  "modifiedDate" : "2026-04-17T13:03:26Z",
+  "pathType" : 0,
+  "preferredFilename" : "burnout_train.csv",
+  "title" : "burnout_train.csv",
+  "version" : "1.0"
+}

@@ -1,0 +1,113 @@
+{
+  "activityEntities" : [
+    "dataSourceMetrics",
+    [
+      {
+        "createdDate" : "2026-04-17T12:58:39Z",
+        "event" : "dataSourceMetrics",
+        "id" : "FC6E9E5D-35DB-4C3E-AF71-4692A2D82EFC",
+        "subtitle" : "3 Classes, 5,000 Items",
+        "title" : "Data Summary"
+      },
+      {
+        "createdDate" : "2026-04-17T13:07:14Z",
+        "event" : "dataSourceMetrics",
+        "id" : "B664D4A6-B928-4B95-98E5-73862D39E9C7",
+        "subtitle" : "3 Classes, 5,000 Items",
+        "title" : "Data Summary"
+      }
+    ],
+    "dataSourceTrainingStarted",
+    [
+      {
+        "createdDate" : "2026-04-17T12:58:39Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "580EB0A1-0E42-4D4F-B6EC-5361FFED259F",
+        "subtitle" : "MyTabularClassifier 1",
+        "title" : "Used By"
+      },
+      {
+        "createdDate" : "2026-04-17T13:07:14Z",
+        "event" : "dataSourceTrainingStarted",
+        "id" : "A930AD6C-A6E3-4439-90DE-D515ADE8B472",
+        "subtitle" : "MyTabularClassifier 4",
+        "title" : "Used By"
+      }
+    ]
+  ],
+  "createdDate" : "2026-04-17T12:57:27Z",
+  "dataPathRelativeToProjectURL" : "../../../Downloads/burnout_prediction_dataset_balanced.csv/",
+  "dataResult" : {
+    "columnTypes" : [
+      "Double",
+      "Double",
+      "Double",
+      "Double",
+      "String"
+    ],
+    "columnValues" : [
+      "7.70, -9.70, 5.20, 6.70, -0.70, -4.80, 22.50, -9.00, 2.10, 10.00, -17.60, -4.40, 2.20, 0.20, 12.70, -2.00, -5.00, 3.90, -2.60, 0.40, 1.10, 17.40, -1.50, 5.50, -7.60, 3.10, -26.70, 1.10, -19.40, -5.00",
+      "7.70, 5.20, 10.00, 7.00, 7.90, 8.50, 10.00, 7.30, 8.20, 8.90, 6.30, 8.50, 9.50, 7.80, 8.50, 10.00, 9.20, 3.50, 7.10, 8.50, 8.60, 5.50, 7.80, 8.20, 6.10, 8.40, 8.40, 10.00, 6.00, 8.00",
+      "1.10, 0.10, 6.00, 0.40, 1.50, 0.20, 0.90, 2.00, 0.30, 0.40, 0.30, 0.30, 0.40, 0.00, 1.50, 2.40, 0.90, 1.00, 0.40, 0.90, 0.90, 0.70, 1.00, 1.50, 3.70, 1.30, 3.30, 1.20, 4.50, 1.20",
+      "7.00, 1.50, 5.10, 8.70, 10.00, 7.90, 10.00, 3.70, 1.00, 9.30, 4.80, 9.10, 7.90, 10.00, 4.00, 10.00, 7.70, 1.00, 4.90, 10.00, 10.00, 8.40, 8.40, 8.20, 4.80, 9.40, 10.00, 10.00, 6.20, 10.00",
+      "Low, Medium, Medium, Low, Low, Low, Low, Medium, Medium, Low, Medium, Low, Low, Low, Medium, High, Low, High, Medium, Low, Low, Medium, Low, Low, High, Low, High, Low, High, Low"
+    ],
+    "columns" : [
+      "Morning_HRV_vs_Baseline_Percent",
+      "Sleep_Hours",
+      "Post_Sunset_Screen_Hours",
+      "Evening_Psychological_Detachment_1_to_10",
+      "Burnout_Risk"
+    ],
+    "createdDate" : "2026-04-17T12:57:27Z",
+    "dataAnalysis" : {
+      "classifierAnalysis" : {
+
+      },
+      "issues" : [
+        {
+          "description" : "No target selected",
+          "severity" : "notReady"
+        },
+        {
+          "description" : "Data has 5000 rows",
+          "severity" : "info"
+        },
+        {
+          "description" : "No features selected",
+          "severity" : "notReady"
+        }
+      ],
+      "objectDetectorAnalysis" : {
+        "details" : {
+
+        }
+      },
+      "summary" : {
+        "canUseValidation" : 1,
+        "sampleCount" : 5000
+      }
+    },
+    "dataSourceID" : "1CF6B9ED-3556-4A6A-8002-7DA7F2E1F76A",
+    "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_prediction_dataset_balanced.csv",
+    "error" : {
+      "code" : 1000,
+      "domain" : "composer.error.domain",
+      "errorType" : "notReady",
+      "reason" : "No target selected"
+    },
+    "itemsCount" : 5000
+  },
+  "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_prediction_dataset_balanced.csv",
+  "experimentIDs" : [
+    "6CCE77C0-C4AC-4329-8464-D62963AD6B96",
+    "CDAC63F1-5210-440A-8F36-441F9962C640",
+    "E1FD2CFC-F5FE-49EB-9417-09BCB1538B20"
+  ],
+  "id" : "1CF6B9ED-3556-4A6A-8002-7DA7F2E1F76A",
+  "modifiedDate" : "2026-04-17T13:07:14Z",
+  "pathType" : 0,
+  "preferredFilename" : "burnout_prediction_dataset_balanced.csv",
+  "title" : "burnout_prediction_dataset_balanced.csv",
+  "version" : "1.0"
+}

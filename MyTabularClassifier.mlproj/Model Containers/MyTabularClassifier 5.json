@@ -1,0 +1,727 @@
+{
+  "activityEntities" : [
+    "trainingStarted",
+    [
+      {
+        "createdDate" : "2026-04-17T13:34:58Z",
+        "event" : "trainingStarted",
+        "id" : "16B79254-15EE-49A6-8452-02293DA5B451",
+        "subtitle" : "1,000 iterations",
+        "title" : "Training Started"
+      },
+      {
+        "createdDate" : "2026-04-17T13:45:47Z",
+        "event" : "trainingStarted",
+        "id" : "84DD0E9B-F7E6-4CD2-853F-4087CAC5AC91",
+        "subtitle" : "996 iterations",
+        "title" : "Training Started"
+      },
+      {
+        "createdDate" : "2026-04-17T13:51:46Z",
+        "event" : "trainingStarted",
+        "id" : "CDF238CA-68A5-429D-8902-8F1809E54F7C",
+        "subtitle" : "996 iterations",
+        "title" : "Training Started"
+      },
+      {
+        "createdDate" : "2026-04-17T13:52:48Z",
+        "event" : "trainingStarted",
+        "id" : "D0A1BCD7-1BA7-4651-BE36-C21F20401501",
+        "subtitle" : "100 iterations",
+        "title" : "Training Started"
+      },
+      {
+        "createdDate" : "2026-04-17T13:54:06Z",
+        "event" : "trainingStarted",
+        "id" : "9B866A23-3B7E-421B-8471-203677634D13",
+        "subtitle" : "100 iterations",
+        "title" : "Training Started"
+      }
+    ],
+    "evaluationFinished",
+    [
+      {
+        "createdDate" : "2026-04-17T13:55:20Z",
+        "event" : "evaluationFinished",
+        "id" : "9D12309D-1FF8-497B-8F58-9C949C87196E",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Testing Completed"
+      }
+    ],
+    "trainingStopped",
+    [
+      {
+        "createdDate" : "2026-04-17T13:45:34Z",
+        "event" : "trainingStopped",
+        "id" : "7D199D9C-0B8C-4C30-801A-F3D2FF20DE5C",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Training Stopped"
+      },
+      {
+        "createdDate" : "2026-04-17T13:51:39Z",
+        "event" : "trainingStopped",
+        "id" : "E49B676D-D06C-496F-8FF1-6C260B7D986F",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Training Stopped"
+      },
+      {
+        "createdDate" : "2026-04-17T13:51:52Z",
+        "event" : "trainingStopped",
+        "id" : "AA69FE33-28D4-4C8F-82D8-7636329EF643",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Training Stopped"
+      },
+      {
+        "createdDate" : "2026-04-17T13:53:47Z",
+        "event" : "trainingStopped",
+        "id" : "F8DA3D88-7758-40D3-9F03-270E1DB472B5",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Training Stopped"
+      }
+    ],
+    "trainingDataAdded",
+    [
+      {
+        "createdDate" : "2026-04-17T13:53:51Z",
+        "event" : "trainingDataAdded",
+        "id" : "1AF717AA-5DCC-4C66-B3C5-D826C9FA4897",
+        "subtitle" : "burnout_full_12k.csv",
+        "title" : "Training Data Added"
+      }
+    ],
+    "evaluationDataAdded",
+    [
+      {
+        "createdDate" : "2026-04-17T13:53:51Z",
+        "event" : "evaluationDataAdded",
+        "id" : "2595076C-E797-440D-8B45-B5727DF07CEE",
+        "subtitle" : "burnout_test_3.6k.csv",
+        "title" : "Testing Data Added"
+      }
+    ],
+    "evaluationStarted",
+    [
+      {
+        "createdDate" : "2026-04-17T13:55:18Z",
+        "event" : "evaluationStarted",
+        "id" : "08A9C1F3-5B47-49F2-91FB-74D4C9BEDEF7",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Testing Started"
+      }
+    ],
+    "trainingFinished",
+    [
+      {
+        "createdDate" : "2026-04-17T13:55:16Z",
+        "event" : "trainingFinished",
+        "id" : "6C062487-BC7D-4B04-8965-493ED89464E8",
+        "subtitle" : "100 iterations",
+        "title" : "Training Completed"
+      }
+    ],
+    "experimentCreated",
+    [
+      {
+        "createdDate" : "2026-04-17T13:27:13Z",
+        "event" : "experimentCreated",
+        "id" : "917ACEED-96AD-4227-BA77-F3A13164D912",
+        "subtitle" : "MyTabularClassifier 5",
+        "title" : "Model Source Created"
+      }
+    ]
+  ],
+  "contentDataResult" : {
+    "createdDate" : "2026-04-17T13:30:56Z"
+  },
+  "createdDate" : "2026-04-17T13:27:13Z",
+  "evaluationContainerEntity" : {
+    "createdDate" : "2026-04-17T13:55:20Z",
+    "evaluationEntities" : [
+
+    ],
+    "id" : "4db70f9c-ac80-45ad-9f02-22338b542ace",
+    "modifiedDate" : "2026-04-17T13:55:20Z",
+    "previewType" : "tabularClassifier",
+    "testingEvaluationEntity" : {
+      "accuracy" : 0.9255555272102356,
+      "analysedDataType" : "datasource",
+      "createdDate" : "2026-04-17T13:27:13Z",
+      "dataResult" : {
+        "classesCount" : 3,
+        "columnTypes" : [
+          "Double",
+          "Double",
+          "Double",
+          "Double",
+          "String"
+        ],
+        "columnValues" : [
+          "4.50, 3.60, -13.80, -11.00, 7.40, -16.40, 4.70, -11.10, 19.00, 8.20, -6.40, -0.30, -19.10, -3.00, -10.30, -5.40, 1.40, -0.10, -17.40, 10.00, -7.00, -6.90, -13.20, 5.50, 7.50, -10.20, -0.50, -5.50, -3.90, -9.70",
+          "9.20, 5.40, 5.40, 6.80, 8.70, 8.60, 8.50, 4.30, 9.40, 9.10, 7.50, 8.80, 4.20, 5.60, 7.50, 6.80, 7.30, 7.30, 4.30, 10.00, 7.10, 7.20, 6.60, 8.00, 7.90, 6.40, 6.90, 3.90, 3.50, 7.60",
+          "1.80, 2.00, 3.80, 3.60, 1.30, 2.30, 0.90, 1.20, 0.70, 0.00, 2.50, 2.40, 0.50, 3.20, 0.10, 1.20, 0.80, 0.40, 0.10, 2.90, 3.30, 5.80, 0.30, 0.80, 0.60, 0.80, 0.60, 1.60, 4.40, 0.20",
+          "3.30, 10.00, 8.60, 3.80, 10.00, 5.20, 7.60, 7.00, 7.90, 10.00, 8.80, 10.00, 2.40, 5.90, 9.60, 6.20, 3.40, 1.00, 7.70, 4.90, 6.50, 6.40, 7.40, 10.00, 3.30, 6.00, 6.60, 7.10, 6.50, 9.90",
+          "Medium, Medium, High, High, Low, High, Low, Medium, Low, Low, Medium, High, High, High, Medium, Medium, High, Medium, Medium, Medium, High, High, Medium, Low, High, High, Medium, Medium, High, Medium"
+        ],
+        "columns" : [
+          "Morning_HRV_vs_Baseline_Percent",
+          "Sleep_Hours",
+          "Post_Sunset_Screen_Hours",
+          "Evening_Psychological_Detachment_1_to_10",
+          "Burnout_Risk"
+        ],
+        "createdDate" : "2026-04-17T13:30:56Z",
+        "dataAnalysis" : {
+          "classifierAnalysis" : {
+
+          },
+          "issues" : [
+            {
+              "description" : "Data has 3600 rows",
+              "severity" : "info"
+            }
+          ],
+          "objectDetectorAnalysis" : {
+            "details" : {
+
+            }
+          },
+          "summary" : {
+            "canUseValidation" : 1,
+            "classCount" : 3,
+            "sampleCount" : 3600
+          }
+        },
+        "dataSourceID" : "744806DD-01CA-4E1C-942B-DC6EA4369ADE",
+        "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_test_3.6k.csv",
+        "itemsCount" : 3600
+      },
+      "dataSourceID" : "744806DD-01CA-4E1C-942B-DC6EA4369ADE",
+      "evaluationResult" : {
+        "generalClassifier" : {
+          "accuracy" : 0.9255555272102356,
+          "statsByLabel" : {
+            "High" : {
+              "count" : 1139,
+              "precisionRecall" : {
+                "success" : {
+                  "precision" : 0.9271636605262756,
+                  "recall" : 0.9499561190605164
+                }
+              }
+            },
+            "Low" : {
+              "count" : 1138,
+              "precisionRecall" : {
+                "success" : {
+                  "precision" : 0.9237855672836304,
+                  "recall" : 0.9692443013191223
+                }
+              }
+            },
+            "Medium" : {
+              "count" : 1323,
+              "precisionRecall" : {
+                "success" : {
+                  "precision" : 0.9257465600967407,
+                  "recall" : 0.8669689893722534
+                }
+              }
+            }
+          }
+        }
+      },
+      "finishTime" : "2026-04-17T13:55:20Z",
+      "id" : "45bb67ca-f8b2-4bec-af48-44b4e6ff499f",
+      "startTime" : "2026-04-17T13:55:18Z"
+    },
+    "trainingEvaluationEntity" : {
+      "analysedDataType" : "none",
+      "createdDate" : "2026-04-17T13:27:13Z",
+      "dataResult" : {
+        "classesCount" : 3,
+        "createdDate" : "2026-04-17T13:30:56Z",
+        "dataAnalysis" : {
+          "classifierAnalysis" : {
+
+          },
+          "issues" : [
+            {
+              "description" : "Data has 12000 rows",
+              "severity" : "info"
+            }
+          ],
+          "objectDetectorAnalysis" : {
+            "details" : {
+
+            }
+          },
+          "summary" : {
+            "canUseValidation" : 1,
+            "classCount" : 3,
+            "sampleCount" : 12000
+          }
+        },
+        "dataSourceID" : "3CA6C5F3-D533-4380-862A-17D3C4AE9739",
+        "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_full_12k.csv",
+        "itemsCount" : 12000
+      },
+      "dataSourceID" : "3CA6C5F3-D533-4380-862A-17D3C4AE9739",
+      "evaluationResult" : {
+        "generalClassifier" : {
+          "accuracy" : 0.9802631578947368,
+          "confusionMatrix" : [
+            {
+              "actual" : "High",
+              "count" : 3583,
+              "expected" : "High"
+            },
+            {
+              "actual" : "High",
+              "count" : 27,
+              "expected" : "Medium"
+            },
+            {
+              "actual" : "Low",
+              "count" : 3575,
+              "expected" : "Low"
+            },
+            {
+              "actual" : "Low",
+              "count" : 27,
+              "expected" : "Medium"
+            },
+            {
+              "actual" : "Medium",
+              "count" : 63,
+              "expected" : "High"
+            },
+            {
+              "actual" : "Medium",
+              "count" : 108,
+              "expected" : "Low"
+            },
+            {
+              "actual" : "Medium",
+              "count" : 4017,
+              "expected" : "Medium"
+            }
+          ],
+          "statsByLabel" : {
+            "High" : {
+              "count" : 3610,
+              "precisionRecall" : {
+                "success" : {
+                  "precision" : 0.9827207899067472,
+                  "recall" : 0.9925207756232687
+                }
+              }
+            },
+            "Low" : {
+              "count" : 3602,
+              "precisionRecall" : {
+                "success" : {
+                  "precision" : 0.970676079283193,
+                  "recall" : 0.9925041643531372
+                }
+              }
+            },
+            "Medium" : {
+              "count" : 4188,
+              "precisionRecall" : {
+                "success" : {
+                  "precision" : 0.9867354458364038,
+                  "recall" : 0.9591690544412608
+                }
+              }
+            }
+          }
+        }
+      },
+      "id" : "2fe2fb8a-94d7-42de-bc92-4e74331a6fde"
+    },
+    "validationEvaluationEntity" : {
+      "analysedDataType" : "auto",
+      "createdDate" : "2026-04-17T13:27:13Z",
+      "dataResult" : {
+        "createdDate" : "2026-04-17T13:30:56Z"
+      },
+      "evaluationResult" : {
+        "generalClassifier" : {
+          "accuracy" : 0.8366666666666667,
+          "confusionMatrix" : [
+            {
+              "actual" : "High",
+              "count" : 162,
+              "expected" : "High"
+            },
+            {
+              "actual" : "High",
+              "count" : 23,
+              "expected" : "Medium"
+            },
+            {
+              "actual" : "Low",
+              "count" : 172,
+              "expected" : "Low"
+            },
+            {
+              "actual" : "Low",
+              "count" : 21,
+              "expected" : "Medium"
+            },
+            {
+              "actual" : "Medium",
+              "count" : 33,
+              "expected" : "High"
+            },
+            {
+              "actual" : "Medium",
+              "count" : 21,
+              "expected" : "Low"
+            },
+            {
+              "actual" : "Medium",
+              "count" : 168,
+              "expected" : "Medium"
+            }
+          ],
+          "statsByLabel" : {
+            "High" : {
+              "count" : 185,
+              "precisionRecall" : {
+                "success" : {
+                  "precision" : 0.8307692307692308,
+                  "recall" : 0.8756756756756757
+                }
+              }
+            },
+            "Low" : {
+              "count" : 193,
+              "precisionRecall" : {
+                "success" : {
+                  "precision" : 0.8911917098445595,
+                  "recall" : 0.8911917098445595
+                }
+              }
+            },
+            "Medium" : {
+              "count" : 222,
+              "precisionRecall" : {
+                "success" : {
+                  "precision" : 0.7924528301886793,
+                  "recall" : 0.7567567567567568
+                }
+              }
+            }
+          }
+        }
+      },
+      "id" : "4b4d9bb5-2112-432e-b4e6-e921ef4c15d2"
+    }
+  },
+  "evaluationEntity" : {
+    "analysedDataType" : "none",
+    "dataResult" : {
+
+    },
+    "id" : "749cbe71-0c7d-4842-a074-f08a739ae824"
+  },
+  "evaluationState" : "evaluated",
+  "id" : "3F6EB8DF-55A4-4FAF-B65B-9090F7E81B40",
+  "modelEntity" : {
+    "createdDate" : "2026-04-17T13:27:13Z",
+    "experimentID" : "3F6EB8DF-55A4-4FAF-B65B-9090F7E81B40",
+    "id" : "C68CBAB9-3E26-45E9-8350-0CE718AE77CA",
+    "modelURL" : "Models/MyTabularClassifier%205.mlmodel",
+    "modifiedDate" : "2026-04-17T13:27:13Z",
+    "title" : "",
+    "version" : "1.0"
+  },
+  "modifiedDate" : "2026-04-17T13:55:20Z",
+  "preferredFilename" : "MyTabularClassifier 5",
+  "settingEntity" : {
+    "algorithmType" : "maxEnt",
+    "augmentations" : [
+
+    ],
+    "featureNames" : [
+      "Morning_HRV_vs_Baseline_Percent",
+      "Sleep_Hours",
+      "Post_Sunset_Screen_Hours",
+      "Evening_Psychological_Detachment_1_to_10"
+    ],
+    "generalClassifierType" : {
+      "randomForestClassifier" : {
+        "columnSubsample" : 0.8,
+        "maxDepth" : 6,
+        "minChildWeight" : 0.01,
+        "minLossReduction" : 0,
+        "rowSubsample" : 0.8
+      }
+    },
+    "handActionClassifierAugmentations" : [
+
+    ],
+    "handPoseClassifierAugmentations" : [
+
+    ],
+    "harVideoAugmentations" : 0,
+    "iterationCount" : 100,
+    "seedType" : "default",
+    "styleTransferAlgorithmType" : "image",
+    "suggestedColumnTypes" : [
+      "Double",
+      "Double",
+      "Double",
+      "Double",
+      "String"
+    ],
+    "suggestedColumnValues" : [
+      "4.60, 5.80, 12.20, 1.40, 0.10, -12.20, 3.40, -15.60, -0.10, -22.10, 10.80, -4.90, -3.20, 9.60, 10.80, -10.30, 0.30, 6.20, -4.20, 7.30, -0.30, 6.20, -3.80, -4.20, -0.60, 8.60, 4.30, 11.30, -2.60, -2.60",
+      "7.60, 5.80, 9.90, 4.60, 7.30, 6.50, 8.40, 7.40, 10.00, 9.30, 7.40, 7.20, 10.00, 7.00, 3.70, 7.40, 7.40, 7.70, 8.10, 9.30, 8.80, 7.70, 4.00, 6.10, 8.10, 4.80, 10.00, 7.50, 5.70, 8.00",
+      "1.20, 4.80, 1.50, 0.90, 0.50, 3.00, 0.00, 3.20, 0.20, 0.20, 0.00, 1.00, 0.30, 0.50, 4.50, 3.00, 0.80, 0.20, 0.10, 0.10, 2.40, 1.40, 3.00, 2.60, 1.30, 1.80, 0.70, 0.40, 0.80, 0.50",
+      "9.50, 3.20, 7.10, 2.60, 10.00, 1.20, 5.10, 5.20, 8.50, 1.00, 8.60, 10.00, 8.90, 7.80, 10.00, 5.20, 10.00, 4.40, 10.00, 7.40, 10.00, 9.60, 6.70, 5.10, 10.00, 2.00, 8.50, 7.00, 6.10, 1.10",
+      "Low, Medium, Low, High, Low, High, Medium, High, Medium, Medium, Low, Low, Low, Low, Medium, Medium, Low, Medium, Low, Low, High, Low, High, High, Low, High, Low, Medium, Medium, Medium"
+    ],
+    "suggestedColumns" : [
+      "Morning_HRV_vs_Baseline_Percent",
+      "Sleep_Hours",
+      "Post_Sunset_Screen_Hours",
+      "Evening_Psychological_Detachment_1_to_10",
+      "Burnout_Risk"
+    ],
+    "targetColumn" : "Burnout_Risk",
+    "taskType" : "generalClassifier",
+    "transferLearningEmbeddingType" : "dynamic"
+  },
+  "snapshotRole" : {
+    "withoutSnapshots" : 0
+  },
+  "state" : "trained",
+  "title" : "MyTabularClassifier 5",
+  "trainingEntity" : {
+    "analysedDataType" : "datasource",
+    "checkpointMetrics" : {
+
+    },
+    "dataResult" : {
+      "classesCount" : 3,
+      "columnTypes" : [
+        "Double",
+        "Double",
+        "Double",
+        "Double",
+        "String"
+      ],
+      "columnValues" : [
+        "4.60, 5.80, 12.20, 1.40, 0.10, -12.20, 3.40, -15.60, -0.10, -22.10, 10.80, -4.90, -3.20, 9.60, 10.80, -10.30, 0.30, 6.20, -4.20, 7.30, -0.30, 6.20, -3.80, -4.20, -0.60, 8.60, 4.30, 11.30, -2.60, -2.60",
+        "7.60, 5.80, 9.90, 4.60, 7.30, 6.50, 8.40, 7.40, 10.00, 9.30, 7.40, 7.20, 10.00, 7.00, 3.70, 7.40, 7.40, 7.70, 8.10, 9.30, 8.80, 7.70, 4.00, 6.10, 8.10, 4.80, 10.00, 7.50, 5.70, 8.00",
+        "1.20, 4.80, 1.50, 0.90, 0.50, 3.00, 0.00, 3.20, 0.20, 0.20, 0.00, 1.00, 0.30, 0.50, 4.50, 3.00, 0.80, 0.20, 0.10, 0.10, 2.40, 1.40, 3.00, 2.60, 1.30, 1.80, 0.70, 0.40, 0.80, 0.50",
+        "9.50, 3.20, 7.10, 2.60, 10.00, 1.20, 5.10, 5.20, 8.50, 1.00, 8.60, 10.00, 8.90, 7.80, 10.00, 5.20, 10.00, 4.40, 10.00, 7.40, 10.00, 9.60, 6.70, 5.10, 10.00, 2.00, 8.50, 7.00, 6.10, 1.10",
+        "Low, Medium, Low, High, Low, High, Medium, High, Medium, Medium, Low, Low, Low, Low, Medium, Medium, Low, Medium, Low, Low, High, Low, High, High, Low, High, Low, Medium, Medium, Medium"
+      ],
+      "columns" : [
+        "Morning_HRV_vs_Baseline_Percent",
+        "Sleep_Hours",
+        "Post_Sunset_Screen_Hours",
+        "Evening_Psychological_Detachment_1_to_10",
+        "Burnout_Risk"
+      ],
+      "createdDate" : "2026-04-17T13:30:56Z",
+      "dataAnalysis" : {
+        "classifierAnalysis" : {
+
+        },
+        "issues" : [
+          {
+            "description" : "Data has 12000 rows",
+            "severity" : "info"
+          }
+        ],
+        "objectDetectorAnalysis" : {
+          "details" : {
+
+          }
+        },
+        "summary" : {
+          "canUseValidation" : 1,
+          "classCount" : 3,
+          "sampleCount" : 12000
+        }
+      },
+      "dataSourceID" : "3CA6C5F3-D533-4380-862A-17D3C4AE9739",
+      "dataURL" : "file:///Users/raajpatkar/Downloads/burnout_full_12k.csv",
+      "itemsCount" : 12000
+    },
+    "dataSourceID" : "3CA6C5F3-D533-4380-862A-17D3C4AE9739",
+    "featureExtractionCheckpointMayBeAvailable" : false,
+    "finishTime" : "2026-04-17T13:55:16Z",
+    "progress" : [
+
+    ],
+    "snapshottableCheckpoints" : {
+
+    },
+    "startTime" : "2026-04-17T13:54:06Z",
+    "trainingAccuracy" : 0.9802631578947368,
+    "trainingResults" : {
+      "generalClassifier" : {
+        "accuracy" : 0.9802631578947368,
+        "confusionMatrix" : [
+          {
+            "actual" : "High",
+            "count" : 3583,
+            "expected" : "High"
+          },
+          {
+            "actual" : "High",
+            "count" : 27,
+            "expected" : "Medium"
+          },
+          {
+            "actual" : "Low",
+            "count" : 3575,
+            "expected" : "Low"
+          },
+          {
+            "actual" : "Low",
+            "count" : 27,
+            "expected" : "Medium"
+          },
+          {
+            "actual" : "Medium",
+            "count" : 63,
+            "expected" : "High"
+          },
+          {
+            "actual" : "Medium",
+            "count" : 108,
+            "expected" : "Low"
+          },
+          {
+            "actual" : "Medium",
+            "count" : 4017,
+            "expected" : "Medium"
+          }
+        ],
+        "statsByLabel" : {
+          "High" : {
+            "count" : 3610,
+            "precisionRecall" : {
+              "success" : {
+                "precision" : 0.9827207899067472,
+                "recall" : 0.9925207756232687
+              }
+            }
+          },
+          "Low" : {
+            "count" : 3602,
+            "precisionRecall" : {
+              "success" : {
+                "precision" : 0.970676079283193,
+                "recall" : 0.9925041643531372
+              }
+            }
+          },
+          "Medium" : {
+            "count" : 4188,
+            "precisionRecall" : {
+              "success" : {
+                "precision" : 0.9867354458364038,
+                "recall" : 0.9591690544412608
+              }
+            }
+          }
+        }
+      }
+    },
+    "validationAccuracy" : 0.8366666666666667,
+    "validationResults" : {
+      "generalClassifier" : {
+        "accuracy" : 0.8366666666666667,
+        "confusionMatrix" : [
+          {
+            "actual" : "High",
+            "count" : 162,
+            "expected" : "High"
+          },
+          {
+            "actual" : "High",
+            "count" : 23,
+            "expected" : "Medium"
+          },
+          {
+            "actual" : "Low",
+            "count" : 172,
+            "expected" : "Low"
+          },
+          {
+            "actual" : "Low",
+            "count" : 21,
+            "expected" : "Medium"
+          },
+          {
+            "actual" : "Medium",
+            "count" : 33,
+            "expected" : "High"
+          },
+          {
+            "actual" : "Medium",
+            "count" : 21,
+            "expected" : "Low"
+          },
+          {
+            "actual" : "Medium",
+            "count" : 168,
+            "expected" : "Medium"
+          }
+        ],
+        "statsByLabel" : {
+          "High" : {
+            "count" : 185,
+            "precisionRecall" : {
+              "success" : {
+                "precision" : 0.8307692307692308,
+                "recall" : 0.8756756756756757
+              }
+            }
+          },
+          "Low" : {
+            "count" : 193,
+            "precisionRecall" : {
+              "success" : {
+                "precision" : 0.8911917098445595,
+                "recall" : 0.8911917098445595
+              }
+            }
+          },
+          "Medium" : {
+            "count" : 222,
+            "precisionRecall" : {
+              "success" : {
+                "precision" : 0.7924528301886793,
+                "recall" : 0.7567567567567568
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "validationEntity" : {
+    "analysedDataType" : "auto",
+    "dataResult" : {
+      "createdDate" : "2026-04-17T13:30:56Z"
+    },
+    "splitOptions" : {
+      "ratio" : 0.05,
+      "seed" : 45704,
+      "strategy" : {
+        "fixed" : {
+
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

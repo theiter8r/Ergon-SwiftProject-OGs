@@ -1,0 +1,10 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Phase 0 default deny-all posture; Phase 1 introduces user-scoped rules.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
