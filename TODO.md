@@ -27,7 +27,8 @@
 - [x] Add shared UTC date-key formatter to keep cron/date partition logic consistent.
 
 ## Phase 4: Developer Guide & Deployment Pipeline
-- [ ] Create `DEPLOYMENT.md` with local/prod setup instructions.
-- [ ] Document Firebase Secret Manager usage for sensitive keys.
-- [ ] Add deployment command checklist for rules/indexes/functions.
-- [ ] Provide iOS date formatting examples (`YYYY-MM-DD`).
+- [x] Create `DEPLOYMENT.md` with local/prod setup instructions.
+- [x] Document Firebase Secret Manager usage for sensitive keys.
+- [x] Add deployment command checklist for rules/indexes/functions.
+- [x] Provide iOS date formatting examples (`YYYY-MM-DD`).
+- [x] Add a production safety checklist to reduce deployment misconfiguration risk.
