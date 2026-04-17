@@ -21,9 +21,10 @@
 - [x] Add runtime payload guards to prevent malformed insight writes from breaking retries.
 
 ## Phase 3: Streak Monitor & FCM Cleanup
-- [ ] Implement nightly scheduled streak check cron.
-- [ ] Reset streak and apply ELO penalty for missed day.
-- [ ] Send reminder push and delete stale `fcm_token` values.
+- [x] Implement nightly scheduled streak check cron.
+- [x] Reset streak and apply ELO penalty for missed day.
+- [x] Send reminder push and delete stale `fcm_token` values.
+- [x] Add shared UTC date-key formatter to keep cron/date partition logic consistent.
 
 ## Phase 4: Developer Guide & Deployment Pipeline
 - [ ] Create `DEPLOYMENT.md` with local/prod setup instructions.
