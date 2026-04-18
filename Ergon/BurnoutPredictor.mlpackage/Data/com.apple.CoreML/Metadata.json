@@ -1,0 +1,15 @@
+{
+  "MLModelVersionStringKey" : "--",
+  "MLModelDescriptionKey" : "--",
+  "MLModelCreatorDefinedKey" : {
+    "com.apple.coreml.model.preview.type" : "tabularClassifier",
+    "com.apple.createml.training.started" : "2026-04-17T15:53:59Z",
+    "com.apple.createml.version" : "26.4.0",
+    "com.apple.createml.training.finished" : "2026-04-17T15:55:08Z",
+    "com.apple.createml.app.tag" : "178.2",
+    "com.apple.createml.model.created" : "2026-04-17T15:55:08Z",
+    "com.apple.createml.app.version" : "6.2"
+  },
+  "MLModelAuthorKey" : "Raaj  Patkar",
+  "MLModelLicenseKey" : "--"
+}

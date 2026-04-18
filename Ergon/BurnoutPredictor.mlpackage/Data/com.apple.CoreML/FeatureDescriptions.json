@@ -1,0 +1,33 @@
+{
+  "Inputs" : {
+    "Subjective_Score" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "HRV_ms" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "Sleep_Hours" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "Calendar_Density" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "Baseline_Deltas" : {
+      "MLFeatureShortDescription" : "--"
+    }
+  },
+  "Outputs" : {
+    "Burnout_RiskProbability" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "Burnout_Risk" : {
+      "MLFeatureShortDescription" : "--"
+    }
+  },
+  "TrainingInputs" : {
+
+  },
+  "States" : {
+
+  }
+}

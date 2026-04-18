@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D316B8202F9295A900F5B0D8 /* BurnoutAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316B81F2F9295A900F5B0D8 /* BurnoutAnalyzer.swift */; };
+		D316B8B12F930E3100F5B0D8 /* BurnoutPredictor.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D316B8B02F930E3100F5B0D8 /* BurnoutPredictor.mlpackage */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D308C40E2F926B4400CF22E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D308C3F82F926B4300CF22E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D308C3FF2F926B4300CF22E4;
+			remoteInfo = Ergon;
+		};
+		D308C4182F926B4400CF22E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D308C3F82F926B4300CF22E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D308C3FF2F926B4300CF22E4;
+			remoteInfo = Ergon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D308C4002F926B4300CF22E4 /* Ergon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ergon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D308C40D2F926B4400CF22E4 /* ErgonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErgonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D308C4172F926B4400CF22E4 /* ErgonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErgonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D316B81F2F9295A900F5B0D8 /* BurnoutAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnoutAnalyzer.swift; sourceTree = "<group>"; };
+		D316B8B02F930E3100F5B0D8 /* BurnoutPredictor.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = BurnoutPredictor.mlpackage; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D308C4022F926B4300CF22E4 /* Ergon */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Ergon;
+			sourceTree = "<group>";
+		};
+		D308C4102F926B4400CF22E4 /* ErgonTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ErgonTests;
+			sourceTree = "<group>";
+		};
+		D308C41A2F926B4400CF22E4 /* ErgonUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ErgonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D308C3FD2F926B4300CF22E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D308C40A2F926B4400CF22E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D308C4142F926B4400CF22E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D308C3F72F926B4300CF22E4 = {
+			isa = PBXGroup;
+			children = (
+				D316B81F2F9295A900F5B0D8 /* BurnoutAnalyzer.swift */,
+				D308C4022F926B4300CF22E4 /* Ergon */,
+				D308C4102F926B4400CF22E4 /* ErgonTests */,
+				D308C41A2F926B4400CF22E4 /* ErgonUITests */,
+				D308C4012F926B4300CF22E4 /* Products */,
+				D316B8B02F930E3100F5B0D8 /* BurnoutPredictor.mlpackage */,
+			);
+			sourceTree = "<group>";
+		};
+		D308C4012F926B4300CF22E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D308C4002F926B4300CF22E4 /* Ergon.app */,
+				D308C40D2F926B4400CF22E4 /* ErgonTests.xctest */,
+				D308C4172F926B4400CF22E4 /* ErgonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D308C3FF2F926B4300CF22E4 /* Ergon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D308C4212F926B4400CF22E4 /* Build configuration list for PBXNativeTarget "Ergon" */;
+			buildPhases = (
+				D308C3FC2F926B4300CF22E4 /* Sources */,
+				D308C3FD2F926B4300CF22E4 /* Frameworks */,
+				D308C3FE2F926B4300CF22E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D308C4022F926B4300CF22E4 /* Ergon */,
+			);
+			name = Ergon;
+			packageProductDependencies = (
+			);
+			productName = Ergon;
+			productReference = D308C4002F926B4300CF22E4 /* Ergon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D308C40C2F926B4400CF22E4 /* ErgonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D308C4242F926B4400CF22E4 /* Build configuration list for PBXNativeTarget "ErgonTests" */;
+			buildPhases = (
+				D308C4092F926B4400CF22E4 /* Sources */,
+				D308C40A2F926B4400CF22E4 /* Frameworks */,
+				D308C40B2F926B4400CF22E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D308C40F2F926B4400CF22E4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D308C4102F926B4400CF22E4 /* ErgonTests */,
+			);
+			name = ErgonTests;
+			packageProductDependencies = (
+			);
+			productName = ErgonTests;
+			productReference = D308C40D2F926B4400CF22E4 /* ErgonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D308C4162F926B4400CF22E4 /* ErgonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D308C4272F926B4400CF22E4 /* Build configuration list for PBXNativeTarget "ErgonUITests" */;
+			buildPhases = (
+				D308C4132F926B4400CF22E4 /* Sources */,
+				D308C4142F926B4400CF22E4 /* Frameworks */,
+				D308C4152F926B4400CF22E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D308C4192F926B4400CF22E4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D308C41A2F926B4400CF22E4 /* ErgonUITests */,
+			);
+			name = ErgonUITests;
+			packageProductDependencies = (
+			);
+			productName = ErgonUITests;
+			productReference = D308C4172F926B4400CF22E4 /* ErgonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D308C3F82F926B4300CF22E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					D308C3FF2F926B4300CF22E4 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					D308C40C2F926B4400CF22E4 = {
+						CreatedOnToolsVersion = 26.4.1;
+						TestTargetID = D308C3FF2F926B4300CF22E4;
+					};
+					D308C4162F926B4400CF22E4 = {
+						CreatedOnToolsVersion = 26.4.1;
+						TestTargetID = D308C3FF2F926B4300CF22E4;
+					};
+				};
+			};
+			buildConfigurationList = D308C3FB2F926B4300CF22E4 /* Build configuration list for PBXProject "Ergon" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D308C3F72F926B4300CF22E4;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D308C4012F926B4300CF22E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D308C3FF2F926B4300CF22E4 /* Ergon */,
+				D308C40C2F926B4400CF22E4 /* ErgonTests */,
+				D308C4162F926B4400CF22E4 /* ErgonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D308C3FE2F926B4300CF22E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D308C40B2F926B4400CF22E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D308C4152F926B4400CF22E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D308C3FC2F926B4300CF22E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D316B8202F9295A900F5B0D8 /* BurnoutAnalyzer.swift in Sources */,
+				D316B8B12F930E3100F5B0D8 /* BurnoutPredictor.mlpackage in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D308C4092F926B4400CF22E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D308C4132F926B4400CF22E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D308C40F2F926B4400CF22E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D308C3FF2F926B4300CF22E4 /* Ergon */;
+			targetProxy = D308C40E2F926B4400CF22E4 /* PBXContainerItemProxy */;
+		};
+		D308C4192F926B4400CF22E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D308C3FF2F926B4300CF22E4 /* Ergon */;
+			targetProxy = D308C4182F926B4400CF22E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D308C41F2F926B4400CF22E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GRS9F34PUF;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D308C4202F926B4400CF22E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GRS9F34PUF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D308C4222F926B4400CF22E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Ergon/Ergon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GRS9F34PUF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "We use the calenders to find out your congested time and fix your schduel";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need to read your sleep data to predict burnout risk.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need to read your HRV to predict burnout risk.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = raajpatkar.Ergon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D308C4232F926B4400CF22E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Ergon/Ergon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GRS9F34PUF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "We use the calenders to find out your congested time and fix your schduel";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need to read your sleep data to predict burnout risk.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need to read your HRV to predict burnout risk.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = raajpatkar.Ergon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D308C4252F926B4400CF22E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GRS9F34PUF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = raajpatkar.ErgonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ergon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ergon";
+			};
+			name = Debug;
+		};
+		D308C4262F926B4400CF22E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GRS9F34PUF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = raajpatkar.ErgonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ergon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ergon";
+			};
+			name = Release;
+		};
+		D308C4282F926B4400CF22E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GRS9F34PUF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = raajpatkar.ErgonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ergon;
+			};
+			name = Debug;
+		};
+		D308C4292F926B4400CF22E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GRS9F34PUF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = raajpatkar.ErgonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ergon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D308C3FB2F926B4300CF22E4 /* Build configuration list for PBXProject "Ergon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D308C41F2F926B4400CF22E4 /* Debug */,
+				D308C4202F926B4400CF22E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D308C4212F926B4400CF22E4 /* Build configuration list for PBXNativeTarget "Ergon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D308C4222F926B4400CF22E4 /* Debug */,
+				D308C4232F926B4400CF22E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D308C4242F926B4400CF22E4 /* Build configuration list for PBXNativeTarget "ErgonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D308C4252F926B4400CF22E4 /* Debug */,
+				D308C4262F926B4400CF22E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D308C4272F926B4400CF22E4 /* Build configuration list for PBXNativeTarget "ErgonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D308C4282F926B4400CF22E4 /* Debug */,
+				D308C4292F926B4400CF22E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D308C3F82F926B4300CF22E4 /* Project object */;
+}
