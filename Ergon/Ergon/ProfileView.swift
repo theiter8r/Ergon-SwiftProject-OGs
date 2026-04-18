@@ -128,6 +128,22 @@ struct ProfileView: View {
             } message: {
                 Text("This will permanently delete your ELO, history, and achievements.")
             }
+            .task {
+                let effectivePreference = await NotificationManager.shared.reconcilePushPreference(pushEnabled: pushNotifications)
+                if effectivePreference != pushNotifications {
+                    pushNotifications = effectivePreference
+                }
+            }
+            .onChange(of: pushNotifications) { _, newValue in
+                Task {
+                    let effectivePreference = await NotificationManager.shared.updatePushPreference(isEnabled: newValue)
+                    if effectivePreference != newValue {
+                        await MainActor.run {
+                            pushNotifications = effectivePreference
+                        }
+                    }
+                }
+            }
         }
     }
 

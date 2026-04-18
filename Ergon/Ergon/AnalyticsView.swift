@@ -5,13 +5,40 @@ struct AnalyticsView: View {
     @EnvironmentObject var vm: EloViewModel
     @State private var selectedRange = "7D"
     let ranges = ["24H", "7D", "1M", "ALL"]
+
+    private var rangeStartDate: Date? {
+        let now = Date()
+        switch selectedRange {
+        case "24H":
+            return Calendar.current.date(byAdding: .hour, value: -24, to: now)
+        case "7D":
+            return Calendar.current.date(byAdding: .day, value: -7, to: now)
+        case "1M":
+            return Calendar.current.date(byAdding: .month, value: -1, to: now)
+        default:
+            return nil
+        }
+    }
+
+    private var filteredHistory: [EloHistoryEvent] {
+        vm.history
+            .filter { event in
+                guard let start = rangeStartDate else { return true }
+                return event.date >= start
+            }
+            .sorted { $0.date < $1.date }
+    }
+
+    private var eventsForList: [EloHistoryEvent] {
+        filteredHistory.sorted { $0.date > $1.date }
+    }
     
     var body: some View {
         NavigationView {
             ZStack {
                 LiquidBackgroundView(level: vm.riskLevel)
                 
-                if vm.history.isEmpty {
+                if filteredHistory.isEmpty {
                     EmptyStateView()
                 } else {
                     ScrollView {
@@ -23,9 +50,9 @@ struct AnalyticsView: View {
                                         Text(range)
                                     }
                                 }
-                                pickerStyle(.segmented)
+                                .pickerStyle(.segmented)
                                 
-                                EloChartView(history: vm.history)
+                                EloChartView(history: filteredHistory)
                                     .frame(height: 200)
                             }
                             .padding(20)
@@ -39,7 +66,7 @@ struct AnalyticsView: View {
                                     .foregroundStyle(.secondary)
                                     .padding(.horizontal, 4)
                                 
-                                ForEach(vm.history) { event in
+                                ForEach(eventsForList) { event in
                                     EventRow(event: event)
                                 }
                             }
@@ -51,7 +78,7 @@ struct AnalyticsView: View {
                                     .foregroundStyle(.secondary)
                                     .padding(.horizontal, 4)
                                 
-                                SleepCorrelationChart(history: vm.history)
+                                SleepCorrelationChart(history: filteredHistory)
                                     .frame(height: 150)
                                     .padding()
                                     .background(.ultraThinMaterial)
@@ -76,24 +103,47 @@ struct AnalyticsView: View {
 
 struct SleepCorrelationChart: View {
     let history: [EloHistoryEvent]
+
+    private struct SleepPoint: Identifiable {
+        let id: UUID
+        let date: Date
+        let hours: Double
+    }
+
+    private var sleepPoints: [SleepPoint] {
+        history.compactMap { event in
+            guard let rawHours = event.sleepHours, rawHours.isFinite else { return nil }
+            let clampedHours = min(max(rawHours, 0.0), 16.0)
+            return SleepPoint(id: event.id, date: event.date, hours: clampedHours)
+        }
+    }
     
     var body: some View {
-        Chart {
-            ForEach(history.filter { $0.sleepHours != nil }) { event in
-                BarMark(
-                    x: .value("Date", event.date),
-                    y: .value("Sleep", event.sleepHours ?? 0)
-                )
-                .foregroundStyle(Color.blue.gradient)
-                .cornerRadius(4)
-            }
-        }
-        .chartYAxis {
-            AxisMarks(position: .leading) { value in
-                AxisGridLine().foregroundStyle(.white.opacity(0.1))
-                AxisValueLabel {
-                    if let hours = value.as(Double.self) {
-                        Text("\(hours, specifier: "%.0f")h")
+        Group {
+            if sleepPoints.isEmpty {
+                Text("Not enough sleep data yet")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            } else {
+                Chart {
+                    ForEach(sleepPoints) { point in
+                        BarMark(
+                            x: .value("Date", point.date),
+                            y: .value("Sleep", point.hours)
+                        )
+                        .foregroundStyle(Color.blue.gradient)
+                        .cornerRadius(4)
+                    }
+                }
+                .chartYAxis {
+                    AxisMarks(position: .leading) { value in
+                        AxisGridLine().foregroundStyle(.white.opacity(0.1))
+                        AxisValueLabel {
+                            if let hours = value.as(Double.self) {
+                                Text("\(hours, specifier: "%.0f")h")
+                            }
+                        }
                     }
                 }
             }
@@ -137,17 +187,24 @@ struct ChartDataPoint: Identifiable {
 
 struct EloChartView: View {
     let history: [EloHistoryEvent]
+
+    private let baseElo = 1200
+    private let minElo = 0
+    private let maxElo = 5000
+    private let minChange = -500
+    private let maxChange = 500
     
     // Simple running total for the chart
     var chartData: [ChartDataPoint] {
-        var runningTotal = 1200 // Base ELO
+        var runningTotal = baseElo
         var data: [ChartDataPoint] = []
         
         // Sort history by date to calculate running total correctly
         let sortedHistory = history.sorted { $0.date < $1.date }
         
         for event in sortedHistory {
-            runningTotal += event.change
+            let safeChange = min(max(event.change, minChange), maxChange)
+            runningTotal = min(max(runningTotal + safeChange, minElo), maxElo)
             data.append(ChartDataPoint(date: event.date, elo: runningTotal))
         }
         

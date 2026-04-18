@@ -120,10 +120,26 @@ stateDiagram-v2
 - **Backend:** Firebase Authentication, Firestore, Cloud Functions (TypeScript)
 - **Local Persistence:** `UserDefaults` (`@AppStorage`), Codable JSON
 
-## 🚀 Running the Project
+## ML Features for the project
 
-1. Open `Ergon/Ergon.xcodeproj` in Xcode 15 or 16.
-2. Select your target device (iPhone 15 or newer recommended).
-3. Ensure your Xcode is set to use the full developer tools (if you encounter `coremlcompiler` errors, run `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer` in terminal).
-4. Hit **Cmd + R** to run.
-5. *(Optional)* To test the AI Alerts on a physical device, navigate to the **Profile** tab and tap the **"Test AI Alert & Mock HealthKit"** button to inject simulated stress data and trigger the notification.
+### Burnout Risk Rules
+
+1. Rule 1 (High Risk - Acute Allostatic Load):
+If Morning_HRV_vs_Baseline_Percent $\le -15\%$, Sleep_Hours $< 6$, and Evening_Psychological_Detachment $< 4$, Burnout_Risk MUST be High.
+(Indicates simultaneous failure of physiological recovery and psychological distancing).
+
+2. Rule 2 (High Risk - Autonomic Disruption):
+If Post_Sunset_Screen_Hours $> 2$ and Morning_HRV_vs_Baseline_Percent $< 0$ (dropping), Burnout_Risk MUST be High.
+(Modeled on blue-light circadian suppression compounding existing autonomic stress).
+
+3. Rule 3 (High Risk - Severe Recovery Deficit):
+If Sleep_Hours $< 5$ and Evening_Psychological_Detachment $\le 3$, Burnout_Risk MUST be High.
+(Even if HRV is temporarily stable, chronic sleep debt paired with rumination guarantees burnout).
+
+4. Rule 4 (Low Risk - Robust Resilience):
+If Sleep_Hours $\ge 7$, Evening_Psychological_Detachment $\ge 7$, Morning_HRV_vs_Baseline_Percent $\ge -5\%$, and Post_Sunset_Screen_Hours $\le 1.5$, Burnout_Risk MUST be Low.
+(Demonstrates excellent physiological baseline and strict behavioral boundaries).
+
+5. Rule 5 (Medium Risk - Compensation Phase):
+Any condition not meeting the severe High criteria or the optimal Low criteria defaults to Medium.
+(This represents individuals in the "resistance" phase of stress, experiencing moderate sleep/HRV fluctuations but still compensating).

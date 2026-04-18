@@ -110,13 +110,20 @@ struct PermissionPage: View {
                     icon: "bell.fill",
                     isAuthorized: notificationsAuthorized
                 ) {
-                    NotificationManager.shared.requestAuthorization()
-                    notificationsAuthorized = true
+                    Task {
+                        let isAuthorized = await NotificationManager.shared.updatePushPreference(isEnabled: true)
+                        await MainActor.run {
+                            notificationsAuthorized = isAuthorized
+                        }
+                    }
                 }
             }
             .padding(.horizontal, 20)
         }
         .tag(tag)
+        .task {
+            notificationsAuthorized = await NotificationManager.shared.isAuthorized()
+        }
     }
 }
 

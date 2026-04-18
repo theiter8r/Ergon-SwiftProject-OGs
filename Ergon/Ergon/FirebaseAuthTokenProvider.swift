@@ -60,7 +60,18 @@ actor FirebaseAuthTokenProvider {
     }
 
     static func apiKey(defaults: UserDefaults = .standard) -> String {
-        return defaults.string(forKey: Keys.apiKey) ?? ""
+        let configured = defaults.string(forKey: Keys.apiKey) ?? ""
+        if !configured.isEmpty {
+            return configured
+        }
+        
+        if let path = Bundle.main.path(forResource: "Secrets", ofType: "plist"),
+           let dict = NSDictionary(contentsOfFile: path),
+           let apiKey = dict["FIREBASE_API_KEY"] as? String {
+            return apiKey
+        }
+        
+        return ""
     }
 
     static func setAPIKey(_ key: String, defaults: UserDefaults = .standard) {
@@ -121,11 +132,21 @@ actor FirebaseAuthTokenProvider {
     }
 
     private func resolvedAPIKey(endpointMode: BackendEndpointMode, defaults: UserDefaults) throws -> String {
+        // 1. Check UserDefaults (manual override via Debug UI)
         let configured = (defaults.string(forKey: Keys.apiKey) ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         if !configured.isEmpty {
             return configured
         }
 
+        // 2. Check Secrets.plist (local configuration)
+        if let path = Bundle.main.path(forResource: "Secrets", ofType: "plist"),
+           let dict = NSDictionary(contentsOfFile: path),
+           let apiKey = dict["FIREBASE_API_KEY"] as? String,
+           !apiKey.isEmpty {
+            return apiKey
+        }
+
+        // 3. Emulator fallback
         if endpointMode == .emulator {
             return "demo-key"
         }

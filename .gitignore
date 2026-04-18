@@ -19,3 +19,4 @@ ui-debug.log
 .env
 .env.*
 *.local
+Secrets.plist

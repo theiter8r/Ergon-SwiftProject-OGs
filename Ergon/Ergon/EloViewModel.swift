@@ -145,15 +145,45 @@ class EloViewModel: ObservableObject {
         }
         updateLeaderboard()
     }
+
+    private func sanitizedMetric(_ value: Double?, minValue: Double, maxValue: Double) -> Double? {
+        guard let value, value.isFinite else {
+            return nil
+        }
+        return min(max(value, minValue), maxValue)
+    }
+
+    private func sanitizedHistory(_ rawHistory: [EloHistoryEvent]) -> [EloHistoryEvent] {
+        var seenIDs = Set<UUID>()
+
+        return rawHistory.compactMap { event in
+            guard seenIDs.insert(event.id).inserted else {
+                return nil
+            }
+
+            let safeChange = min(max(event.change, -500), 500)
+            let safeSleep = sanitizedMetric(event.sleepHours, minValue: 0.0, maxValue: 16.0)
+            let safeHRV = sanitizedMetric(event.hrv, minValue: 0.0, maxValue: 300.0)
+
+            return EloHistoryEvent(
+                id: event.id,
+                date: event.date,
+                change: safeChange,
+                reason: event.reason,
+                sleepHours: safeSleep,
+                hrv: safeHRV
+            )
+        }
+    }
     
     private func loadProgress() {
         if let savedData = UserDefaults.standard.data(forKey: storageKey),
            let decoded = try? JSONDecoder().decode(PersistableData.self, from: savedData) {
-            currentElo = decoded.elo
-            riskScore = decoded.risk
-            streak = decoded.streak
+            currentElo = min(max(decoded.elo, 0), 5000)
+            riskScore = min(max(decoded.risk, 0.0), 10.0)
+            streak = max(decoded.streak, 0)
             lastCompletedTaskDateKey = decoded.lastCompletedTaskDateKey
-            history = decoded.history
+            history = sanitizedHistory(decoded.history)
             milestones = decoded.milestones
             userName = decoded.userName
             hasCompletedOnboarding = decoded.hasCompletedOnboarding
