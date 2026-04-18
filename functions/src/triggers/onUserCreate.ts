@@ -10,6 +10,7 @@ const DEFAULT_STREAK = 0;
 
 const buildDefaultUserDocument = (email: string): UserDocumentCreate => ({
   email,
+  display_name: null,
   current_elo: DEFAULT_ELO,
   streak_count: DEFAULT_STREAK,
   fcm_token: null,

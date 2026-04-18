@@ -12,6 +12,10 @@ const isValidRiskScore = (value: unknown): value is number => {
   return typeof value === "number" && Number.isFinite(value) && value >= 0 && value <= 10;
 };
 
+const isOptionalTenPointScore = (value: unknown): boolean => {
+  return value === undefined || isValidRiskScore(value);
+};
+
 const isDailyInsightDocument = (value: unknown): value is DailyInsightDocument => {
   if (typeof value !== "object" || value === null) {
     return false;
@@ -22,12 +26,17 @@ const isDailyInsightDocument = (value: unknown): value is DailyInsightDocument =
   return (
     isValidRiskScore(candidate.risk_score) &&
     typeof candidate.completed_microtask === "boolean" &&
-    typeof candidate.processed_for_elo === "boolean"
+    typeof candidate.processed_for_elo === "boolean" &&
+    isOptionalTenPointScore(candidate.mental_energy) &&
+    isOptionalTenPointScore(candidate.sleep_quality) &&
+    isOptionalTenPointScore(candidate.digital_disconnect) &&
+    (candidate.source === undefined || typeof candidate.source === "string")
   );
 };
 
 const getUserDefaults = () => ({
   email: "",
+  display_name: null,
   current_elo: DEFAULT_ELO,
   streak_count: 0,
   fcm_token: null,

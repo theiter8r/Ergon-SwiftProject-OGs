@@ -17,12 +17,14 @@ service cloud.firestore {
     function validUserDocumentShape() {
       return request.resource.data.keys().hasOnly([
           'email',
+          'display_name',
           'current_elo',
           'streak_count',
           'fcm_token',
           'createdAt'
         ]) &&
         request.resource.data.email is string &&
+        (request.resource.data.display_name == null || request.resource.data.display_name is string) &&
         request.resource.data.current_elo is number &&
         request.resource.data.streak_count is number &&
         (request.resource.data.fcm_token == null || request.resource.data.fcm_token is string) &&
@@ -34,6 +36,10 @@ service cloud.firestore {
           'risk_score',
           'completed_microtask',
           'processed_for_elo',
+          'mental_energy',
+          'sleep_quality',
+          'digital_disconnect',
+          'source',
           'timestamp'
         ]) &&
         request.resource.data.risk_score is number &&
@@ -41,6 +47,22 @@ service cloud.firestore {
         request.resource.data.risk_score <= 10 &&
         request.resource.data.completed_microtask is bool &&
         request.resource.data.processed_for_elo is bool &&
+        (!('mental_energy' in request.resource.data) || (
+          request.resource.data.mental_energy is number &&
+          request.resource.data.mental_energy >= 0 &&
+          request.resource.data.mental_energy <= 10
+        )) &&
+        (!('sleep_quality' in request.resource.data) || (
+          request.resource.data.sleep_quality is number &&
+          request.resource.data.sleep_quality >= 0 &&
+          request.resource.data.sleep_quality <= 10
+        )) &&
+        (!('digital_disconnect' in request.resource.data) || (
+          request.resource.data.digital_disconnect is number &&
+          request.resource.data.digital_disconnect >= 0 &&
+          request.resource.data.digital_disconnect <= 10
+        )) &&
+        (!('source' in request.resource.data) || request.resource.data.source is string) &&
         request.resource.data.timestamp is timestamp;
     }
 

@@ -5,15 +5,30 @@
 ### Required Tooling
 - Node.js 20 or newer.
 - npm 10 or newer.
+- Java 21 or newer (required by Firestore emulator).
 - Firebase CLI installed globally.
 
 ### Install and Verify
 ```bash
 node -v
 npm -v
+java -version
 
 npm install -g firebase-tools
 firebase --version
+```
+
+### macOS: Install Java (if missing)
+If `java -version` reports no runtime found:
+
+```bash
+brew install openjdk@21
+
+echo 'export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"' >> ~/.zshrc
+echo 'export JAVA_HOME="/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home"' >> ~/.zshrc
+
+source ~/.zshrc
+java -version
 ```
 
 ### Authenticate Firebase CLI
@@ -146,6 +161,95 @@ db.collection("users")
   .collection("daily_insights")
   .document(dateKey)
   .setData(payload, merge: true)
+```
+
+## 6) Mobile Sync Endpoints (Cloud Functions HTTP)
+
+The Swift app now syncs to backend using HTTPS functions:
+
+- `upsertUserProfile`
+- `submitDailyInsight`
+
+Both endpoints now require a Firebase ID token in the `Authorization` header:
+
+```text
+Authorization: Bearer <firebase-id-token>
+```
+
+Requests without a valid token are rejected with `401`.
+If a request includes `uid`, it must match the token's `uid`.
+
+### Token Source in iOS App
+
+The app now fetches Firebase ID tokens automatically using anonymous Firebase Auth REST flows.
+
+- Emulator mode: uses Auth emulator at `127.0.0.1:9099` (default API key fallback: `demo-key`).
+- Production/custom mode: requires a Firebase Web API key.
+
+In debug builds, configure this in Profile -> Backend Debug:
+
+- Backend mode (Emulator/Production/Custom)
+- Firebase Web API Key
+- Optional manual ID token override
+
+Use **Check** in the same panel to validate token status against backend `verifyMobileAuth` endpoint.
+
+Default endpoint base URL in simulator mode:
+
+```text
+http://127.0.0.1:5001/ergon-dev/us-central1
+```
+
+Default endpoint base URL on device/release mode:
+
+```text
+https://us-central1-ergon-dev.cloudfunctions.net
+```
+
+The app debug panel (Profile -> Backend Debug) can switch endpoint mode:
+
+- Emulator
+- Production
+- Custom URL
+
+The same panel stores the Firebase ID token used by sync requests.
+
+### Example: Upsert User Profile
+
+```bash
+curl -X POST http://127.0.0.1:5001/ergon-dev/us-central1/upsertUserProfile \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <firebase-id-token>" \
+  -d '{
+    "uid": "local-device-uid-123",
+    "display_name": "Raaj",
+    "email": "",
+    "fcm_token": null
+  }'
+```
+
+### Example: Submit Daily Insight
+
+```bash
+curl -X POST http://127.0.0.1:5001/ergon-dev/us-central1/submitDailyInsight \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <firebase-id-token>" \
+  -d '{
+    "uid": "local-device-uid-123",
+    "date_key": "2026-04-18",
+    "risk_score": 4.8,
+    "completed_microtask": true,
+    "mental_energy": 6,
+    "sleep_quality": 7,
+    "digital_disconnect": 5
+  }'
+```
+
+### Example: Verify Token
+
+```bash
+curl -X GET http://127.0.0.1:5001/ergon-dev/us-central1/verifyMobileAuth \
+  -H "Authorization: Bearer <firebase-id-token>"
 ```
 
 ## Production Safety Checklist
